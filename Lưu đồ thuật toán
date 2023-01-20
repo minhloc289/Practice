@@ -14,3 +14,181 @@ int main(){
     return 0;
     
 }
+
+#Bai2
+#include <iostream>
+
+using namespace std;
+int main(){
+    int n;
+    cin >> n;
+
+    long S = 0;
+    for (int i = 0; i <= n; i++){
+        S += i * i;
+    }
+    cout << S;
+    return 0;
+    
+}
+
+#Bai3
+#include <iostream>
+
+using namespace std;
+int main(){
+    int n;
+    do {
+        cin >> n;
+        if (n < 1){
+            cout << "Nhap lai";
+        }
+    } while (n < 1);
+    float S = 0;
+    
+    for (int i = 1; i <= n; i++){
+        S = S + (1.0/i); // phải là 1.0
+    }
+    cout << S;
+    return 0;
+}
+
+#Bai4
+#include <iostream>
+
+using namespace std;
+int main(){
+    int n;
+    do {
+        cin >> n;
+        if (n < 1){
+            cout << "Nhap lai";
+        }
+    } while (n < 1);
+    float S = 0;
+    
+    for (int i = 1; i <= n; i++){
+        S = S + 1.0 / (2*i);
+    }
+    cout << S;
+    return 0;
+}
+
+#Bai 5
+#include <iostream>
+
+using namespace std;
+int main(){
+    int n;
+    do {
+        cin >> n;
+        if (n < 1){
+            cout << "Nhap lai";
+        }
+    } while (n < 1);
+    float S = 0;
+    
+    for (int i = 0; i < n; i++){
+        S = S + 1.0 / ((2*i) + 1);
+    }
+    cout << S;
+    return 0;
+}
+
+#Bai 6
+#include <iostream>
+
+using namespace std;
+int main(){
+    int n;
+    do {
+        cin >> n;
+        if (n < 1){
+            cout << "Nhap lai";
+        }
+    } while (n < 1);
+    float S = 0;
+    
+    for (int i = 1; i <= n; i++){
+        S = S + 1.0 / (i*(i+1));
+    }
+    cout << S;
+    return 0;
+}
+
+#Bai7
+#include <iostream>
+
+using namespace std;
+int main(){
+    int n;
+    do {
+        cin >> n;
+        if (n < 1){
+            cout << "Nhap lai";
+        }
+    } while (n < 1);
+    float S = 0;
+    
+    for (int i = 1; i <= n; i++){
+        S = S + i / (i+1);
+    }
+    cout << S;
+    return 0;
+}
+
+#Bai8 
+#include <iostream>
+
+using namespace std;
+int main(){
+    int n;
+    do {
+        cin >> n;
+        if (n < 1){
+            cout << "Nhap lai";
+        }
+    } while (n < 1);
+    float S = 0;
+    
+    for (int i = 0; i < n; i++){
+        S += (float)((2*i) + 1) / ((2*i) + 2);
+    }
+    cout << S;
+    return 0;
+}
+
+#Bai9
+#include <iostream>
+
+using namespace std;
+int main(){
+    int n;
+    do {
+        cin >> n;
+        if (n < 1){
+            cout << "Nhap lai";
+        }
+    } while (n < 1);
+    float S = 1;
+    
+    for (int i = 1; i <= n; i++){
+        S *= i;
+    }
+    cout << S;
+    return 0;
+}
+
+#Bai10
+#include<iostream>
+#include<conio.h>
+#include<math.h>
+using namespace std;
+int main()
+{
+    double x, n, result;
+    cin >> x >> n;
+    result = pow(x,n);
+    cout << result;
+    return 0;
+}
