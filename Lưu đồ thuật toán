@@ -569,3 +569,257 @@ int main() {
   
     return 0;
 }
+
+#Bai31: Kiem tra so nguyen to
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    do{
+        cin >> n;
+        if (n < 0){
+            cout << "Vui long nhap lai: ";
+        }
+    } while (n < 2);
+    if (n < 2){
+        cout << "Khong phai so nguyen to";
+        
+    }
+    
+    for (int i = 3; i < n - 1; i++){
+        if (n % i == 0){
+            cout << n << " khong phai so nguyen to";
+            return 0;
+        }
+    }
+    cout << n << " la so nguyen to" << endl;
+    return 0;
+}
+
+#Bai32: Kiem tra so chinh phuong  
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main() {
+    int n;
+    do{
+        cin >> n;
+        if (n < 0){
+            cout << "Vui long nhap lai: ";
+        }
+    } while (n < 2);
+    if (n < 2){
+        cout << "Khong phai so nguyen to";
+    }
+    
+    int a = sqrt(n);
+    if (a*a == n){
+        cout << n << " la so chinh phuong.";
+    }
+    else {
+        cout << n << " khong phai la so chinh phuong";
+    }
+    return 0;
+}
+
+#Bai42:
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main() {
+    int n;
+    int s = 0;
+    int i = 0;
+    do{
+        cin >> n;
+        if (n < 0){
+            cout << "Vui long nhap lai: ";
+        }
+    } while (n < 0);
+    while (s + i < n){
+        i++;
+        s = s + i;
+    }
+    cout << i;
+    return 0;
+}
+
+#Bai43: Dem so luong chu so n
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main() {
+    long n, so;
+    int dem = 0;
+    do{
+        cin >> n;
+        if (n < 0){
+            cout << "Vui long nhap lai: ";
+        }
+    } while (n < 0);
+    
+    so = n;
+    if (n == 0){
+        dem == 1;
+    }    
+    while (so != 0){
+        dem++;
+        so = so / 10;
+    }
+    cout << n << " co " << dem << " chu so.";
+    
+    return 0;
+}
+
+#Bai44: Tinh tong chu so n
+#include <iostream>
+using namespace std;
+int main() {
+    long n;
+    int s = 0;
+    do{
+        cin >> n;
+        if (n < 0){
+            cout << "Vui long nhap lai: ";
+        }
+    } while (n < 0);
+    while (n != 0){
+        s = s + n % 10;
+        n /= 10;
+    }
+    cout << s;
+    return 0;
+}
+
+#Bai45: Tinh tich chu so n
+#include <iostream>
+using namespace std;
+int main() {
+    long n;
+    int s = 1;
+    do{
+        cin >> n;
+        if (n < 0){
+            cout << "Vui long nhap lai: ";
+        }
+    } while (n < 0);
+    while (n != 0){
+        s = s * (n % 10); // phai co dau ngoac hoac sai!!!!
+        n /= 10;
+    }
+    cout << s;
+    return 0;
+}
+
+#Bai 46: Dem chu so le
+#include <iostream>
+using namespace std;
+int main() {
+    long n, so;
+    int dem = 0;
+    do{
+        cin >> n;
+        if (n < 0){
+            cout << "Vui long nhap lai: ";
+        }
+    } while (n < 0);
+    so = n;
+    if (n == 0){
+        dem = 1;
+    }
+    while (so != 0){
+       if (so % 2 != 0){
+           dem++;
+       }
+       so /= 10;
+    }
+    cout << n << " co " << dem << " chu so le.";
+    return 0;
+}
+
+#Bai 47: Tinh tong chu so chan
+#include <iostream>
+using namespace std;
+int main() {
+    long n;
+    int s = 0;
+    int t = 0;
+    do{
+        cin >> n;
+        if (n < 0){
+            cout << "Vui long nhap lai: ";
+        }
+    } while (n < 0);
+    
+    while (n != 0){
+        if (n % 2 == 0){
+            s += n % 10;
+        }
+        n /= 10;
+    }
+    cout << s;
+    return 0;
+}
+
+#Bai48: Tinh tich chu so le n
+#include <iostream>
+using namespace std;
+int main() {
+    long n;
+    int s = 1;
+    do{
+        cin >> n;
+        if (n < 0){
+            cout << "Vui long nhap lai: ";
+        }
+    } while (n < 0);
+    
+    while (n != 0){
+        if (n % 2 != 0){
+            s *= n % 10;
+        }
+        n /= 10;
+    }
+    cout << s;
+    return 0;
+}
+
+#Bai49: Tim so dau tien
+#include <iostream>
+using namespace std;
+int main() {
+    long n;
+    int s = 1;
+    do{
+        cin >> n;
+        if (n < 0){
+            cout << "Vui long nhap lai: ";
+        }
+    } while (n < 0);
+    do{
+        n /= 10;
+    } while (n > 10);
+    cout << "So dau tien la: " << n;
+    return 0;
+}
+
+#Bai50: Tim so dao nguoc
+#include <iostream>
+using namespace std;
+int main() {
+    long n;
+    int s;
+    do{
+        cin >> n;
+        if (n < 0){
+            cout << "Vui long nhap lai: ";
+        }
+    } while (n < 0);
+    while (n != 0){
+        s = n % 10;
+        n /= 10;
+        cout << s;
+    }
+    return 0;
+}
+
