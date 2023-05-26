@@ -992,3 +992,35 @@ int main() {
    return 0;
 } 
 
+Bai57: Kiem tra so doi xung
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    int *a = new int[n];
+    bool flag = false;
+    do {
+        cin >> n;
+        if (n < 0){
+            cout << "Yeu cau nhap lai!";
+        }
+    } while (n < 0);
+    for (int i = 0; i < n; i++){
+        cin >> a[i];
+    }
+    for (int i = 0; i < n; i++){
+        if (a[i] == a[n - i - 1]){
+            flag = true;
+        }
+    }
+    if (flag == true){
+        cout << "Day la so doi xung";
+    }
+    else {
+        cout << "Khong phai so doi xung";
+    }
+}
+
+Bai58:
+
+
